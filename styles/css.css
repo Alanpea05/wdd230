@@ -70,3 +70,8 @@ ul li{
     font-size: 30px;
     background-color: transparent;
 }
+
+footer{
+    width: 40%;
+    margin: auto;
+}

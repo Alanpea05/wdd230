@@ -8,15 +8,13 @@
   --accent1-color: #13262F;
   --accent2-color: #D5DFE5;
 
-  /* change the values below to your chosen font(s) */
   --heading-font: "Libre Bodoni";
   --paragraph-font: "Open sans";
 
-  /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+
+  --headline-color-on-white: #396E94;   
+  --headline-color-on-color: white; 
+  --paragraph-color-on-white: #396E94; 
   --paragraph-background-color: #396E94  ;
   --nav-link-color: white;
   --nav-background-color: #73683B;
@@ -24,16 +22,21 @@
   --nav-hover-background-color: #396E94;
 }
 
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
-
 body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4em;
+
   font-size: 18px;
   text-align: center;
 }
+
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+p{
+  font-size: 25px;
+}
+
 img {
   display: block;
   margin: 0 auto;
@@ -57,11 +60,15 @@ hr {
 header {
   padding: 1em;
   text-align: center;
-  color: var(--paragraph-color-on-color);
+  color: var(--nav-background-color);
   background-color: var(--paragraph-background-color);
 }
-header > h1, header > h2 {
-  color: var(--headline-color-on-color);
+h1, header, h2 {
+  color: white;
+}
+
+header hr{
+  background-color: white;
 }
 
 p {
@@ -74,13 +81,15 @@ p {
   min-width: 350px;
   margin: 30px auto;
   text-align: center;
+  font-size: 30px;
 }
 .colors th {
   background-color: #999;
 }
+
 .colors td{
   width: 25%;
-  height: 3em;
+  height: 5em;
 }
 
 .primary {
@@ -105,6 +114,53 @@ p.colored {
   color: var(--paragraph-color-on-color);
 }
 
+.title_typography{
+  color: #8B0D32;
+  font-size: 40px;
+}
+
+#typography{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4,1fr);
+  background-color: rgba(159, 153, 153, 0.235);
+  grid-gap: 10px;
+  height: 800px;
+}
+
+#typography h5:nth-of-type(1){
+  font-size: 40px;
+  color: #8B0D32;
+}
+
+#typography h5:nth-of-type(2){
+  font-size: 30px;
+  color: #73683B;
+  margin: auto;
+}
+
+#typography h5:nth-of-type(3){
+  font-size: 20px;
+  color: #13262F;
+  margin: auto;
+}
+
+#typography h5:nth-of-type(4){
+  font-size: 25px;
+  margin: auto;
+  color: #13262F;
+}
+
+ 
+
+
+#typography h3, h4 {
+  text-align: center;
+  margin: auto;
+  color: #000;
+}
+
 nav {
   background-color: var(--nav-background-color);
   line-height: 3em;
@@ -114,21 +170,23 @@ nav {
 nav  {
   list-style-type: none;
   display: flex;
-
+  background-color: #396E94;
 }
 nav a {
-  padding:1em;
+  padding: 25px;
   min-width: 120px;
   text-decoration: none;
-  padding: 10px;
-
 }
+nav ul{
+  margin-top: 10px;
+}
+
 nav a:link, nav a:visited {
   color: var(--nav-link-color);
 }
+
 nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+border: 1px solid rgba(255, 255, 255, 0.183);
 }
 
 .sitemap {
@@ -179,3 +237,65 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+#flex_nav{
+  display: flex;
+  width: 100%;
+  font-size: 40px;
+  flex-flow: row wrap;
+  list-style-type: none;
+  
+  justify-content: space-around;
+}
+
+
+/* ----------------------- Target audience -------------------------------- */
+
+#scenarios{
+  padding-bottom: 100px;
+}
+
+#personas_grid{
+  display: grid;
+  grid-template-columns: repeat(3,  1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.border_grid img{
+  width: 150px;
+  padding: 20px;
+}
+
+.border_grid h3,h4{
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+  font-size: 40px;
+}
+
+.border_grid h5:nth-of-type(1){
+  font-size: 30px;
+  color: black;
+  margin-top: 18%;
+}
+
+.border_grid{
+  border: 1px solid black;
+}
+
+#scenarios_list{
+  font-size: 35px;
+  list-style: decimal;
+}
+
+
+
+footer{
+  background-color: #8B2635;
+  color: white;
+  height: 100%;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 60px;
+  }
+

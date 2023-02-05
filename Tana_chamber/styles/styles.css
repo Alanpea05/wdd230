@@ -2,6 +2,15 @@
     margin: 0.5px;
 }
 
+#banner{
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-family: open sans;
+}
+
 header{
     display: flex;
     height: 200px;
@@ -38,6 +47,11 @@ header a{
     color: white;
 }
 
+header a:hover{
+    color: rgba(148, 197, 240, 0.687);
+
+}
+
 #social_icon{
     margin-left: 700px;
 }
@@ -69,9 +83,6 @@ main{
 
 .block{
     margin: auto;
-    width: 100%;
-    height: 100%;
-   
 }
 
 .block_one{
@@ -110,23 +121,119 @@ main{
 
 .block_three{
     display: grid;
-    width: 70%;
+    width: 90%;
     height: 700px;
     margin: auto;   
-    margin-top: 120px;
     margin-bottom: 20px;
-    background-color: gray;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 3px solid rgba(0, 0, 0, 0.336);
     
+}
+
+.block_three img{
+    width: 180px;
+}
+
+.block_three h1{
+    margin: auto;
 }
 
 .block_four{
     display: grid;
-    width: 70%;
-    
+    width: 100%;
     margin: auto;   
-    background-color: gray;
-    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 257px;
+    height: 700px;
 }
+
+
+
+
+
+
+
+
+.spotlight{
+    border: 3px solid rgba(0, 0, 0, 0.221);
+}
+
+.spotlight_one{
+text-align: center;
+height: 550px;
+grid-row: 1/3;
+}
+
+.spotlight_one h1{
+    font-size: 50px;
+    margin-top: 6%;
+}
+
+.spotlight_one h3{
+    font-size: 40px;
+    margin: 10px;
+}
+
+.spotlight_one h4{
+    font-size: 28px;
+    margin: 10px;
+}
+
+.spotlight_one img{
+    width: 250px;
+
+}
+
+.spotlight_one hr{
+    width: 80%;
+    margin: auto;
+    height: 2px;
+    background-color: black;
+}
+
+.spotlight_two{
+    height: 100%;
+    width: 550px;
+    grid-row: 1/2;
+}
+
+.spotlight_two h1{
+    background-color: rgb(58, 118, 238);
+    width: 200px;
+    padding: 20px;
+    margin-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2%;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+.spotlight_two h3{
+    margin: 40px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.spotlight_three{
+    width: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.spotlight_three img{
+    width: 100%;
+    height: 125px;
+}
+
+
 
 footer{
     margin-top: auto;
@@ -184,13 +291,15 @@ font-size: 30px;
     }
 
     main{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 900px 1fr;
+        grid-template-columns: 700px 600px;
+        grid-template-rows: 700px 1fr;
     }
 
     
 
-
+    .block{
+        grid-gap: 20px;
+    }
 
     .block_one h3{
         display: none;
@@ -198,13 +307,32 @@ font-size: 30px;
     }
 
     .block_two{
-        margin-top: -50px;
+        width: 700px;
+        margin: 0;
+    }
+
+    .block_two img{
+        width: 80%;
+        margin-left: 0;
     }
 
     #box_hamburguer{
         display: grid;
         margin-left: auto;
         margin-right: 20px;
+    }
+
+    .block_three{
+        display: none;
+    }
+
+    .block_four{
+        margin-left: 20%;
+    }
+
+    .spotlight_one{
+        
+        width: 400px;
     }
     
 }
@@ -217,19 +345,42 @@ font-size: 30px;
     .block_one{
         height: 40%;
         margin-left: 25%;
+        padding-bottom: 200px;
     }
 
+    .block_one h1 h2{
+        margin-right:auto;
+    }
+
+    .block_two{
+        height: 700px;
+        margin-left: 20%;
+    }
     .block_img-two{
         margin-left: 50px;
         margin-top: -30%;
     }
 
-    .block_three{
-        margin-top: -20%;
+    .block_four{
+        margin-top: -150px;
+        margin-left: 20%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        padding-bottom: 550px;
+        grid-gap:5px
     }
 
-    .block_four{
-        margin-top: -50%;
+    .spotlight_one{
+        grid-row: 1/2;
+        width: 550px;
+    }
+
+    .spotlight_two{
+        grid-row: 2/3;
+    }
+
+    .spotlight_three{
+        grid-row: 3/4;
     }
 
     #footer_up #footer_img img{
